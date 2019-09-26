@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Homework01: Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>First Number</ion-label>
+    <ion-input type="number" [(ngModel)] = "firstNumber"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Second Number</ion-label>
+    <ion-input type="number" [(ngModel)] = "secondNumber"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label>Result: <span class="result">{{result}}</span></ion-label>
+    </ion-item>
+
+  <ion-button shape = "round" size = "small" (click) = "add()">+</ion-button>
+  <ion-button shape = "round" size = "small" (click) = "sub()">-</ion-button>
+  <ion-button shape = "round" size = "small" (click) = "mult()">*</ion-button>
+  <ion-button shape = "round" size = "small" (click) = "div()">/</ion-button>
+          
+</ion-content>
