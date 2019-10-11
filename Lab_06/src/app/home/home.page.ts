@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDoService } from '../services/to-do.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public TodoService: ToDoService) {}
 
 }

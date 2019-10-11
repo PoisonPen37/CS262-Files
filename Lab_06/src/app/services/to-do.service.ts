@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Todo} from '../interfaces/todo';
-import { loadavg } from 'os';
-import { saveConfig } from '@ionic/core';
+//import { loadavg } from 'os';
+//import { saveConfig } from '@ionic/core';
 @Injectable({
   providedIn: 'root'
 })

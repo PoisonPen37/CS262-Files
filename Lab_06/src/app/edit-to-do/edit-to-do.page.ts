@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {Todo} from '../interfaces/todo';
 
 @Component({
@@ -9,7 +10,7 @@ import {Todo} from '../interfaces/todo';
 export class EditToDoPage implements OnInit {
 
   private todo: Todo;
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.todo = {
       id: 0,
       title: '',
@@ -19,7 +20,8 @@ export class EditToDoPage implements OnInit {
   }
 
   ngOnInit() {
-    // Grab ID from route
+    let id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
   }
 
   saveTodo(){
