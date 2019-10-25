@@ -73,3 +73,45 @@ INSERT INTO Property VALUES (1, 'The Basement');
 INSERT INTO Property VALUES (2, 'Boardwalk');
 
 INSERT INTO Player_Property VALUES (1, 1, 3, 0);
+
+--8.1.a
+SELECT *
+FROM Game
+ORDER BY time DESC;
+
+--8.1.b
+SELECT *
+FROM Game
+WHERE time > time - interval '7 days';
+
+--8.1.c
+SELECT *
+FROM Player
+WHERE name IS NOT NULL;
+
+--8.1.d
+SELECT playerID
+FROM PlayerGame
+WHERE score > 2000;
+
+--8.1.e
+SELECT *
+FROM Player
+WHERE emailAddress LIKE '%gmail%';
+
+--8.2.a
+SELECT score
+FROM Player, PlayerGame
+WHERE Player.ID = PlayerGame.playerID
+  AND Player.name = 'The King'
+ORDER BY score DESC;
+
+--8.2.b
+SELECT Player.name 
+FROM Player, Game, PlayerGame 
+WHERE Player.ID = PlayerGame.playerID 
+	AND Game.ID = PlayerGame.gameID 
+	AND Game.time = '2006-06-28 13:20:00' 
+ORDER BY PLayerGame.score DESC LIMIT 1;
+
+
